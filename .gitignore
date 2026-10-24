@@ -1,0 +1,27 @@
+# Environments
+.venv/
+env/
+venv/
+__pycache__/
+*.pyc
+
+# Node / Frontend
+node_modules/
+dist/
+.vite/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local logs
+*.log
