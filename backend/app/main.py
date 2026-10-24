@@ -31,6 +31,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+@app.middleware("http")
+async def normalize_vercel_paths(request, call_next):
+    raw_path = request.scope.get("path", "")
+    if raw_path.startswith("/api/index.py"):
+        sub = raw_path[len("/api/index.py"):]
+        request.scope["path"] = f"/api{sub}" if sub else "/api"
+    return await call_next(request)
+
+
 # Mount all routers under /api and root for rewrite compatibility
 for r in [health_router, meta_router, decision_router, accuracy_router, evolution_router]:
     app.include_router(r, prefix="/api")
