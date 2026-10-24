@@ -1,0 +1,217 @@
+{
+  "scope": {
+    "delivery_start": "2026-01-02",
+    "delivery_end": "2026-02-01",
+    "delivery_days": 31,
+    "half_hours": 1488
+  },
+  "metrics_0920_epex": {
+    "n": 1488,
+    "mae": 2042.0,
+    "rmse": 2509.1,
+    "bias": 1747.9,
+    "wape": 18.1,
+    "mape": 22.11,
+    "p50_abs_error": 1688.0,
+    "p90_abs_error": 4140.1,
+    "p95_abs_error": 5310.0,
+    "largest_over": {
+      "error_mw": 6894.0,
+      "timestamp": "2026-01-12 01:00:00+00:00",
+      "settlementPeriod": 3,
+      "forecast_mw": 20942.0,
+      "actual_mw": 14048.0
+    },
+    "largest_under": {
+      "error_mw": -3835.0,
+      "timestamp": "2026-01-08 18:30:00+00:00",
+      "settlementPeriod": 38,
+      "forecast_mw": 5349.0,
+      "actual_mw": 9184.0
+    },
+    "share_over": 84.7,
+    "share_under": 15.3,
+    "share_exact": 0.0
+  },
+  "metrics_0950_nordpool": {
+    "n": 1488,
+    "mae": 2016.3,
+    "rmse": 2510.2,
+    "bias": 1729.9,
+    "wape": 17.87,
+    "mape": 21.68,
+    "p50_abs_error": 1654.5,
+    "p90_abs_error": 4196.8,
+    "p95_abs_error": 5346.6,
+    "largest_over": {
+      "error_mw": 6857.0,
+      "timestamp": "2026-01-12 01:00:00+00:00",
+      "settlementPeriod": 3,
+      "forecast_mw": 20905.0,
+      "actual_mw": 14048.0
+    },
+    "largest_under": {
+      "error_mw": -4450.0,
+      "timestamp": "2026-01-08 18:30:00+00:00",
+      "settlementPeriod": 38,
+      "forecast_mw": 4734.0,
+      "actual_mw": 9184.0
+    },
+    "share_over": 84.3,
+    "share_under": 15.7,
+    "share_exact": 0.0
+  },
+  "comparison_0920_vs_0950": {
+    "days_with_fresher_forecast": 31,
+    "total_days": 31,
+    "share_days_fresher_pct": 100.0,
+    "mae_reduction_mw": 25.7,
+    "wape_reduction_pct": 0.23
+  },
+  "extreme_days": {
+    "best_day": {
+      "delivery_date": "2026-01-20",
+      "n": 48,
+      "mae": 1058.5,
+      "rmse": 1444.1,
+      "bias": 351.8,
+      "wape": 7.0,
+      "forecast_energy_mwh": 371570.0,
+      "actual_energy_mwh": 363126.0
+    },
+    "worst_day": {
+      "delivery_date": "2026-01-28",
+      "n": 48,
+      "mae": 5374.8,
+      "rmse": 5402.5,
+      "bias": 5374.8,
+      "wape": 93.32,
+      "forecast_energy_mwh": 267230.0,
+      "actual_energy_mwh": 138235.0
+    }
+  },
+  "diurnal_hours": {
+    "best_hour": {
+      "hour": 21,
+      "n": 62,
+      "mae": 1788.5,
+      "rmse": 2330.3,
+      "bias": 1544.2,
+      "wape": 15.18,
+      "mean_forecast_mw": 13327.5,
+      "mean_actual_mw": 11783.2,
+      "p10_error": -684.0,
+      "p50_error": 1345.0,
+      "p90_error": 3820.9
+    },
+    "worst_hour": {
+      "hour": 5,
+      "n": 62,
+      "mae": 2436.1,
+      "rmse": 2923.7,
+      "bias": 2358.1,
+      "wape": 22.57,
+      "mean_forecast_mw": 13151.4,
+      "mean_actual_mw": 10793.3,
+      "p10_error": 549.6,
+      "p50_error": 2145.5,
+      "p90_error": 4881.6
+    }
+  },
+  "risk_buffers": {
+    "low_wind_day": {
+      "date": "2026-01-08",
+      "forecast_energy_mwh": 128948.0,
+      "actual_energy_mwh": 108673.5,
+      "p10_buffer_mwh": 97093.8
+    },
+    "high_wind_day": {
+      "date": "2026-01-27",
+      "forecast_energy_mwh": 477303.0,
+      "actual_energy_mwh": 393804.5,
+      "p10_buffer_mwh": 97093.8
+    }
+  },
+  "horizon_breakdown": [
+    {
+      "bucket": "0-6h",
+      "min_horizon": 0.0,
+      "max_horizon": 6.0,
+      "n": 1488,
+      "mae": 1660.0,
+      "rmse": 2120.0,
+      "bias": 1427.7,
+      "wape": 14.76
+    },
+    {
+      "bucket": "6-12h",
+      "min_horizon": 6.0,
+      "max_horizon": 12.0,
+      "n": 1488,
+      "mae": 1734.5,
+      "rmse": 2192.4,
+      "bias": 1502.8,
+      "wape": 15.32
+    },
+    {
+      "bucket": "12-24h",
+      "min_horizon": 12.0,
+      "max_horizon": 24.0,
+      "n": 2976,
+      "mae": 1893.2,
+      "rmse": 2368.0,
+      "bias": 1703.0,
+      "wape": 16.78
+    },
+    {
+      "bucket": "24-36h",
+      "min_horizon": 24.0,
+      "max_horizon": 36.0,
+      "n": 2976,
+      "mae": 2018.8,
+      "rmse": 2480.8,
+      "bias": 1717.9,
+      "wape": 17.89
+    },
+    {
+      "bucket": "36-48h",
+      "min_horizon": 36.0,
+      "max_horizon": 48.0,
+      "n": 2945,
+      "mae": 2249.8,
+      "rmse": 2789.2,
+      "bias": 1905.0,
+      "wape": 19.95
+    },
+    {
+      "bucket": "48h+",
+      "min_horizon": 48.0,
+      "max_horizon": 1000.0,
+      "n": 2510,
+      "mae": 2317.3,
+      "rmse": 2925.4,
+      "bias": 1402.6,
+      "wape": 20.35
+    }
+  ],
+  "data_quality": [
+    {
+      "dataset": "FUELHH (Outturn Actuals)",
+      "total_rows": 1872,
+      "completeness_pct": 100.0,
+      "duplicates": 0,
+      "gaps": 0,
+      "min_mw": 1695.0,
+      "max_mw": 17805.0
+    },
+    {
+      "dataset": "WINDFOR (Forecasts)",
+      "total_rows": 22776,
+      "completeness_pct": 100.0,
+      "duplicates": 0,
+      "gaps": 0,
+      "min_mw": 1981.0,
+      "max_mw": 21353.0
+    }
+  ]
+}
