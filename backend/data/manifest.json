@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-10-24T14:28:55.785033+00:00",
+  "attribution": "Contains BMRS data \u00a9 Elexon Limited copyright and database right 2026.",
+  "buffer": {
+    "start_date": "2025-12-28",
+    "end_date": "2026-02-04"
+  },
+  "datasets": {
+    "FUELHH": {
+      "file": "fuelhh_actuals.csv.gz",
+      "endpoint": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream",
+      "rows": 1872,
+      "sha256": "7f9fb1ccafd4b4ad684bbf15aad1bfcee1178d19526ba1db68acede972c86b6a",
+      "size_bytes": 14867,
+      "min_startTime": "2025-12-28T00:00:00Z",
+      "max_startTime": "2026-02-04T23:30:00Z",
+      "min_generation_mw": 1695.0,
+      "max_generation_mw": 17805.0,
+      "mean_generation_mw": 11076.028846153846,
+      "expected_settlement_periods": 48
+    },
+    "WINDFOR": {
+      "file": "windfor_forecasts.csv.gz",
+      "endpoint": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream",
+      "rows": 22776,
+      "sha256": "c4a2c227f186935e091ea76e90188f04f379501ced7fcd6de22d59c767502e64",
+      "size_bytes": 115461,
+      "min_publishTime": "2025-12-27T02:30:00Z",
+      "max_publishTime": "2026-02-03T22:30:00Z",
+      "min_startTime": "2025-12-26T21:00:00Z",
+      "max_startTime": "2026-02-05T21:00:00Z",
+      "min_generation_mw": 1981.0,
+      "max_generation_mw": 21353.0,
+      "unique_publish_times": 312
+    }
+  }
+}
