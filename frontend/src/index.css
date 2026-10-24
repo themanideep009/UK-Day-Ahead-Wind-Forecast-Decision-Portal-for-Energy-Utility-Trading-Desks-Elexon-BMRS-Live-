@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,31 +6,61 @@
 
 @layer base {
   body {
-    @apply bg-[#090d16] text-slate-100 font-sans antialiased min-h-screen selection:bg-cyan-500 selection:text-black;
+    @apply bg-[#060911] text-slate-100 font-sans antialiased min-h-screen selection:bg-cyan-500 selection:text-black;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(6, 182, 212, 0.08) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.07) 0px, transparent 50%),
+      radial-gradient(at 50% 100%, rgba(16, 185, 129, 0.05) 0px, transparent 50%);
+    background-attachment: fixed;
   }
 }
 
-/* Custom scrollbars for data tables */
+/* Custom premium scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #090d16;
+  background: #060911;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
-  border-radius: 3px;
+  background: #1b2742;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #2a3a5f;
 }
 
 /* Glassmorphism card utilities */
 .card-trading {
-  @apply bg-slate-900/80 backdrop-blur-md border border-slate-800/80 rounded-xl shadow-lg transition-all duration-200 hover:border-slate-700/80;
+  @apply bg-[#0b101d]/85 backdrop-blur-xl border border-[#1b2742] rounded-2xl shadow-xl transition-all duration-300;
+}
+
+.card-trading:hover {
+  border-color: rgba(6, 182, 212, 0.35);
+  box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.15);
+}
+
+.card-trading-glow {
+  @apply card-trading relative overflow-hidden;
+}
+
+.card-trading-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.6), transparent);
 }
 
 .kpi-stat-value {
-  @apply text-2xl font-bold tracking-tight text-white font-mono;
+  @apply text-2xl lg:text-3xl font-extrabold tracking-tight text-white font-mono;
+}
+
+/* Custom input styling */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.8) hue-rotate(160deg) brightness(1.2);
+  cursor: pointer;
 }

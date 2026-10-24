@@ -48,7 +48,7 @@ if ($res.metrics.wape -gt 0) {
 
 # 5. Frontend
 Write-Host -NoNewline "[5/5] Testing Frontend (/) ... "
-$res = Invoke-WebRequest -Uri "$BaseUrl/" -Method Get
+$res = Invoke-WebRequest -Uri "$BaseUrl/" -Method Get -UseBasicParsing
 if ($res.Content -match "GB Wind Day-Ahead Forecast Decision Portal") {
     Write-Host "PASS (HTML loaded)" -ForegroundColor Green
 } else {
