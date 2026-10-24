@@ -2,6 +2,20 @@
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
+[project]
+name = "uk-wind-forecast-decision-portal"
+version = "0.1.0"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn>=0.34.0",
+    "pydantic>=2.10.0",
+    "pandas>=2.2.0",
+    "numpy>=2.0.0",
+    "httpx>=0.28.0",
+    "tzdata>=2024.2",
+]
+
+
 [tool.pytest.ini_options]
 minversion = "7.0"
 testpaths = ["backend/tests"]

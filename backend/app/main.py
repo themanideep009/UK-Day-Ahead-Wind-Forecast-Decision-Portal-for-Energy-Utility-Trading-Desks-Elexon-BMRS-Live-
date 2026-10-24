@@ -31,12 +31,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Mount all routers under /api
-app.include_router(health_router, prefix="/api")
-app.include_router(meta_router, prefix="/api")
-app.include_router(decision_router, prefix="/api")
-app.include_router(accuracy_router, prefix="/api")
-app.include_router(evolution_router, prefix="/api")
+# Mount all routers under /api and root for rewrite compatibility
+for r in [health_router, meta_router, decision_router, accuracy_router, evolution_router]:
+    app.include_router(r, prefix="/api")
+    app.include_router(r)
+
 
 
 @app.get("/", include_in_schema=False)

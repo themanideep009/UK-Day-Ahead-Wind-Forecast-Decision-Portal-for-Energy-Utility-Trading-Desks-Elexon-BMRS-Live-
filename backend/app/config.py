@@ -9,6 +9,16 @@ from zoneinfo import ZoneInfo
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
+if not DATA_DIR.exists():
+    for candidate in [
+        Path.cwd() / "backend" / "data",
+        Path.cwd() / "data",
+        Path("/var/task/backend/data"),
+    ]:
+        if candidate.exists():
+            DATA_DIR = candidate
+            break
+
 
 # Scope Configuration
 # "decision_month": decisions made 2026-01-01..2026-01-31 -> delivery 2026-01-02..2026-02-01

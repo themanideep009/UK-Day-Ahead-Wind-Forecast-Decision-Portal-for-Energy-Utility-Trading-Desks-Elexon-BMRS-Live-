@@ -8,3 +8,6 @@ if str(ROOT_DIR) not in sys.path:
 
 from backend.app.main import app
 
+# Alias for Vercel ASGI serverless handler
+handler = app
+
